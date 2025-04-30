@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Subscriptions/v17
+/.vs/Subscriptions.API/CopilotIndices/17.13.444.19527
+/.vs/Subscriptions.API/FileContentIndex
+/.vs/Subscriptions.API/v17
+/.vs
+/src/Subscriptions.API/.vs
+/src/Subscriptions.API/bin/Debug/net8.0
+/src/Subscriptions.API/obj
+/src/Subscriptions.API.Models/bin/Debug/net8.0
+/src/Subscriptions.API.Models/obj
+/src/Subscriptions.API/appsettings.Development.json
