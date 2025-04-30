@@ -1,4 +1,5 @@
 ﻿using Azure.Messaging.ServiceBus;
+using Microsoft.Extensions.Options;
 using Subscriptions.API.Interfaces;
 using Subscriptions.API.Models;
 using System.Text.Json;
@@ -10,10 +11,10 @@ namespace Subscriptions.API.Implementations.Services
         private readonly ServiceBusClient _serviceBusClient;
         private readonly AzureServiceBusSettings _settings;
 
-        public ServiceBusService(ServiceBusClient serviceBusClient, AzureServiceBusSettings settings)
+        public ServiceBusService(ServiceBusClient serviceBusClient, IOptions<AzureServiceBusSettings> options)
         {
             _serviceBusClient = serviceBusClient;
-            _settings = settings;
+            _settings = options.Value;
         }
 
         public async Task<AddSubscriptionResponse> AddSubscription(AddSubscriptionRequest request)

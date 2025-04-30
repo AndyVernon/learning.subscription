@@ -1,6 +1,8 @@
 
 using Azure.Messaging.ServiceBus;
 using Microsoft.Extensions.Options;
+using Subscriptions.API.Implementations.Services;
+using Subscriptions.API.Interfaces;
 using Subscriptions.API.Models;
 
 namespace Subscriptions.API
@@ -18,12 +20,13 @@ namespace Subscriptions.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.Configure<AzureServiceBusSettings>(builder.Configuration.GetSection("AzureServiceBusSettings"));
+            builder.Services.Configure<AzureServiceBusSettings>(builder.Configuration.GetSection(AzureServiceBusSettings.SectionName));
             builder.Services.AddSingleton<ServiceBusClient>(sp =>
             {
                 var config = sp.GetRequiredService<IOptions<AzureServiceBusSettings>>().Value;
                 return new ServiceBusClient(config.ConnectionString);
             });
+            builder.Services.AddSingleton<ISubscriptionService, ServiceBusService>();
 
             var app = builder.Build();
 
