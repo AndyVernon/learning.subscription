@@ -13,3 +13,5 @@
 /src/Subscriptions.API.Models/bin/Debug/net8.0
 /src/Subscriptions.API.Models/obj
 /src/Subscriptions.API/appsettings.Development.json
+/src/Subscriptions.FunctionApps/bin/Debug/net8.0
+/src/Subscriptions.FunctionApps/obj
