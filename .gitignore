@@ -15,3 +15,4 @@
 /src/Subscriptions.API/appsettings.Development.json
 /src/Subscriptions.FunctionApps/bin/Debug/net8.0
 /src/Subscriptions.FunctionApps/obj
+/src/Subscriptions.FunctionApps/local.settings.json

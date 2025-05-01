@@ -1,8 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "<Azure-storage-connection-string>",
-    "CosmosDbConnection": "<cosmos-db-connection-string>",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
-  }
-}
